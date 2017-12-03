@@ -53,7 +53,7 @@ pub fn solve() -> String {
       let rotation = &instruction[..1];
       let steps = (&instruction[1..]).parse().expect("Error parsing directions");
       current_direction = rotate(current_direction, &rotation);
-      for i in (0..steps) {
+      for _i in 0..steps {
         pos = translate(pos.0, pos.1, current_direction, 1);
         if visited_places.contains_key(&pos) { return (pos.0.abs() + pos.1.abs()).to_string() }
         visited_places.insert(pos, true);

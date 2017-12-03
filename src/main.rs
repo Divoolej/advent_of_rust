@@ -21,4 +21,7 @@ fn main() {
     println!("| Day 2: ");
     println!("| - A) {}", year_2017::day_2::solve_a());
     println!("| - B) {}", year_2017::day_2::solve_b());
+    println!("| Day 3: ");
+    println!("| - A) {}", year_2017::day_3::solve_a());
+    println!("| - B) {}", year_2017::day_3::solve_b());
 }
