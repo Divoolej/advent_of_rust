@@ -1,10 +1,12 @@
 mod a;
 mod b;
 
-pub fn solve_a() -> String {
-    a::solve()
-}
+use crate::day::Day;
 
-pub fn solve_b() -> String {
-    b::solve()
+pub struct Day2;
+
+impl Day for Day2 {
+  day!(2);
+  solve_a!();
+  solve_b!();
 }

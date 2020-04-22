@@ -12,13 +12,9 @@ fn diff(line: &str) -> i32 {
     max - min
 }
 
-pub fn solve() -> String {
-    let mut file = File::open("inputs/2017/2/spreadsheet.csv")
-        .expect("inputs/2017/2/spreadsheet.csv not found");
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)
-        .expect("Error reading inputs/2017/2/spreadsheet.csv");
-    let lines: Vec<&str> = contents.split("\n").collect();
+pub fn solve(input_dir: &str) -> String {
+    let input = input!(input_dir, "spreadsheet.csv");
+    let lines: Vec<&str> = input.split("\n").collect();
     let mut checksum = 0;
     for line in lines {
         checksum += diff(line);

@@ -38,19 +38,14 @@ fn translate(x: i32, y: i32, direction: char, steps: i32) -> (i32, i32) {
     }
 }
 
-pub fn solve() -> String {
-    let mut file =
-        File::open("inputs/2016/1/directions.txt").expect("inputs/2016/1/directions.txt not found");
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)
-        .expect("Error reading inputs/2016/1/directions.txt");
-
+pub fn solve(input_dir: &str) -> String {
+    let input = input!(input_dir, "directions.txt");
     let mut pos = (0, 0);
     let mut current_direction = 'N';
     let mut visited_places = HashMap::new();
     visited_places.insert(pos, true);
 
-    let directions: Vec<String> = contents.split(", ").map(|s| s.to_string()).collect();
+    let directions: Vec<String> = input.split(", ").map(|s| s.to_string()).collect();
     for instruction in directions {
         let rotation = &instruction[..1];
         let steps = (&instruction[1..])

@@ -1,7 +1,9 @@
 [package]
-name = "advent_of_code"
+name = "advent_of_rust"
 version = "0.1.0"
 authors = ["Wojciech Olejnik <divoolej@gmail.com>"]
 edition = "2018"
 
-[dependencies]
+[[bin]]
+name = "advent"
+path = "src/main.rs"

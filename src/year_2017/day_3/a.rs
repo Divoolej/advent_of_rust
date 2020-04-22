@@ -95,13 +95,9 @@ fn find_target_pos(start_pos: (i32, i32), level: i32, target: i32) -> (i32, i32)
     pos
 }
 
-pub fn solve() -> String {
-    let mut file =
-        File::open("inputs/2017/3/input.txt").expect("inputs/2017/3/input.txt not found");
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)
-        .expect("Error reading inputs/2017/3/input.txt");
-    let target: i32 = contents
+pub fn solve(input_dir: &str) -> String {
+    let input = input!(input_dir, "input.txt");
+    let target: i32 = input
         .parse()
         .expect("Error parsing inputs/2017/3/input.txt");
     let n = level_for_target(&target);

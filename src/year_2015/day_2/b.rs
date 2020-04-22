@@ -9,13 +9,9 @@ fn calculate_needed_paper(dimensions: &Vec<i32>) -> i32 {
     area + smallest_side_area
 }
 
-pub fn solve() -> String {
-    let mut file =
-        File::open("inputs/2015/2/dimensions.txt").expect("inputs/2015/2/dimensions.txt not found");
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)
-        .expect("Error reading inputs/2015/2/dimensions.txt");
-    let dimensions_list: Vec<&str> = contents.split("\n").collect();
+pub fn solve(input_dir: &str) -> String {
+    let input = input!(input_dir, "dimensions.txt");
+    let dimensions_list: Vec<&str> = input.split("\n").collect();
     let mut sum = 0;
     for dimensions_string in dimensions_list {
         let mut dimensions: Vec<i32> = dimensions_string
