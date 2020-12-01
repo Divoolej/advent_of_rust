@@ -12,16 +12,16 @@ macro_rules! day {
 
 macro_rules! solve_a {
   () => {
-    fn solve_a(year: u16) {
-      println!("{}", a::solve(Self::input_dir(year).as_str()));
+    fn solve_a(year: u16) -> String {
+      a::solve(Self::input_dir(year).as_str())
     }
   };
 }
 
 macro_rules! solve_b {
   () => (
-    fn solve_b(year: u16) {
-      println!("{}", b::solve(Self::input_dir(year).as_str()));
+    fn solve_b(year: u16) -> String {
+      b::solve(Self::input_dir(year).as_str())
     }
   )
 }

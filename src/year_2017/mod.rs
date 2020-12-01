@@ -13,15 +13,15 @@ pub struct Year2017;
 impl Year for Year2017 {
   year!(2017);
 
-  fn solve_day_1(variant: &str) {
-    Self::solve_day::<Day1>(variant);
+  fn solve_day_1(variant: &str) -> String {
+    Self::solve_day::<Day1>(variant)
   }
 
-  fn solve_day_2(variant: &str) {
-    Self::solve_day::<Day2>(variant);
+  fn solve_day_2(variant: &str) -> String {
+    Self::solve_day::<Day2>(variant)
   }
 
-  fn solve_day_3(variant: &str) {
-    Self::solve_day::<Day3>(variant);
+  fn solve_day_3(variant: &str) -> String {
+    Self::solve_day::<Day3>(variant)
   }
 }

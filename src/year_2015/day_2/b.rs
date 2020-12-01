@@ -1,9 +1,8 @@
-fn calculate_needed_paper(dimensions: &Vec<i32>) -> i32 {
-    let area = 2 * dimensions[0] * dimensions[1]
-        + 2 * dimensions[0] * dimensions[2]
-        + 2 * dimensions[1] * dimensions[2];
-    let smallest_side_area = dimensions[0] * dimensions[1];
-    area + smallest_side_area
+fn calculate_needed_ribbon(dimensions: &Vec<i32>) -> i32 {
+    let shortest_perimeter = 2 * dimensions[0] + 2 * dimensions[1];
+    let volume = dimensions[0] * dimensions[1] * dimensions[2];
+
+    shortest_perimeter + volume
 }
 
 pub fn solve(input_dir: &str) -> String {
@@ -16,7 +15,7 @@ pub fn solve(input_dir: &str) -> String {
             .filter_map(|d| d.parse().ok())
             .collect();
         dimensions.sort();
-        sum += calculate_needed_paper(&dimensions);
+        sum += calculate_needed_ribbon(&dimensions);
     }
     sum.to_string()
 }

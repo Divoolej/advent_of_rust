@@ -28,11 +28,12 @@ fn main() {
 }
 
 fn solve(year: &str, day: &str, variant: &str) {
-  match year {
+  let result = match year {
     "2015" => Year2015::solve(day, variant),
     "2016" => Year2016::solve(day, variant),
     "2017" => Year2017::solve(day, variant),
     "2020" => Year2020::solve(day, variant),
-    _ => println!("Error: invalid year: {}", year),
-  }
+    _ => format!("Error: invalid year: {}", year),
+  };
+  println!("{}", result);
 }
