@@ -1,6 +1,3 @@
-use std::fs::File;
-use std::io::Read;
-
 fn div(line: &str) -> i32 {
     let numbers: Vec<i32> = line.split("\t").filter_map(|c| c.parse().ok()).collect();
     for number in &numbers {

@@ -1,6 +1,3 @@
-use std::fs::File;
-use std::io::Read;
-
 fn calculate_needed_paper(dimensions: &Vec<i32>) -> i32 {
     let area = 2 * dimensions[0] * dimensions[1]
         + 2 * dimensions[0] * dimensions[2]

@@ -29,6 +29,8 @@ macro_rules! solve_b {
 macro_rules! input {
   ($dir:expr, $name:expr) => {
     {
+      use std::fs::File;
+      use std::io::Read;
       let mut file = File::open(format!("{}/{}", $dir, $name))
         .expect(format!("{}/{} not found", $dir, $name).as_str());
       let mut contents = String::new();

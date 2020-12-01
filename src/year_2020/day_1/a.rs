@@ -1,5 +1,3 @@
-use std::fs::File;
-use std::io::Read;
 use std::collections::HashSet;
 
 pub fn solve(input_dir: &str) -> String {

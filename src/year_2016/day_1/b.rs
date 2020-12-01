@@ -1,6 +1,4 @@
 use std::collections::HashMap;
-use std::fs::File;
-use std::io::Read;
 
 fn rotate(direction: char, rotation: &str) -> char {
     match direction {

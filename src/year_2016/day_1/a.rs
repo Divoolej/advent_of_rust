@@ -1,6 +1,3 @@
-use std::fs::File;
-use std::io::Read;
-
 fn rotate(direction: char, rotation: &str) -> char {
     match direction {
         'N' => match rotation {

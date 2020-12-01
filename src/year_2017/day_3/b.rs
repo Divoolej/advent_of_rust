@@ -1,6 +1,4 @@
 use std::collections::HashMap;
-use std::fs::File;
-use std::io::Read;
 
 fn move_impossible(pos: &(i32, i32), level: i32, direction: &char) -> bool {
     match *direction {

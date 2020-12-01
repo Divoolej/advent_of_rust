@@ -1,6 +1,3 @@
-use std::fs::File;
-use std::io::Read;
-
 pub fn solve(input_dir: &str) -> String {
   let input = input!(input_dir, "report.txt");
 
