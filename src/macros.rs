@@ -1,6 +1,6 @@
 macro_rules! year {
   ($n:expr) => {
-    fn year() -> u16 { 2017 }
+    fn year() -> u16 { $n }
   };
 }
 
