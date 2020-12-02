@@ -7,3 +7,6 @@ edition = "2018"
 [[bin]]
 name = "advent"
 path = "src/main.rs"
+
+[dependencies]
+md5 = "*"
