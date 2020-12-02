@@ -1,18 +1,8 @@
-# 2017
-### Day 1
-- [X] Part 1
-- [X] Part 2
-### Day 2
-- [X] Part 1
-- [X] Part 2
-### Day 3
-- [X] Part 1
-- [X] Part 2
-# 2016
-### Day 1
-- [X] Part 1
-- [X] Part 2
-# 2015
-### Day 1
-- [X] Part 1
-- [X] Part 2
+### Solve a particular problem:
+```shell
+cargo run <YEAR> <DAY> <VARIANT>
+```
+### Run tests for all already solved problems:
+```shell
+cargo test
+```
