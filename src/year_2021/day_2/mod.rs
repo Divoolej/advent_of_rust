@@ -3,10 +3,10 @@ mod b;
 
 use crate::day::Day;
 
-pub struct Day1;
+pub struct Day2;
 
-impl Day for Day1 {
-  day!(1);
+impl Day for Day2 {
+  day!(2);
   solve_a!();
   solve_b!();
 }

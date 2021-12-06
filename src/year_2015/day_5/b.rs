@@ -29,7 +29,7 @@ fn is_nice(string: Vec<char>) -> bool {
   first_condition && second_condition
 }
 
-pub fn solve(input_dir: &str) -> String {
+pub fn solve(_input_dir: &str) -> String {
   let input = "xxyxx"; //input!(input_dir, "strings.txt");
   let mut count = 0;
 
